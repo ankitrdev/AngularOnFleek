@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">These are the list of users </h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <ul>
+        <li *ngFor='let user of users' [routerLink]="['detail', user.name]" >{{user.name}}</li>
+      </ul>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
